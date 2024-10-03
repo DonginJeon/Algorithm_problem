@@ -1,3 +1,11 @@
+- 1003
+```
+- 숫자를 끊기
+  list(map(int,str(order)))
+- sorted로 끊어진 문자열
+  ''.join(sorted(my_string.lower())) 이걸로 합칠 수 있음
+```
+
 - 0905
 ```
 문자열에서 숫자만 찾고 싶을때, isdigit을 하면됨
