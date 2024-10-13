@@ -1,3 +1,47 @@
+- 1013
+
+```
+- 이중 리스트를 닥셔너리로 만듦
+def solution(snippet, message):
+    # 메시지를 공백 단위로 단어 리스트로 변환
+    words = message.split()
+    
+    # snippet을 딕셔너리로 변환
+    snippet_dict = {abbr: full for abbr, full in snippet}
+    
+    # 각 단어를 순회하면서 대치가 필요한 경우 대치
+    for i in range(len(words)):
+        if words[i] in snippet_dict:
+            words[i] = snippet_dict[words[i]]
+```
+```
+- 정규표현식 및 join
+
+import re
+
+def solution(snippet, message):
+    m_list = re.split(r'(\s+|[!@#$%^&*().,?])', message) 
+    
+    for i in range(len(m_list)):
+        # 단어가 대치될 단어에 해당하는지 확인
+        for pair in snippet:
+            if m_list[i] == pair[0]:
+                # 대치 목록에 있으면 해당 단어를 대치 단어로 변경
+                m_list[i] = pair[1]
+    
+    # 대치된 단어 리스트를 다시 문자열로 합쳐서 반환
+    return ''.join(m_list)
+```
+
+```
+- 최대공약수 : math.gcd(a,b)
+```
+
+```
+- 순회한 문자가 특정 문자를 포함하고 있는지 : all(c in '05' for c in str(num))
+```
+
+
 - 1012
 
 ```
