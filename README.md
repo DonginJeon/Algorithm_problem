@@ -1,8 +1,36 @@
+- 1016
+
+```
+- 합성수
+output = 0:
+
+합성수의 개수를 저장하는 변수로, 처음에는 0으로 초기화합니다.
+for i in range(4, n + 1):
+
+숫자 4부터 n까지의 숫자들을 검사합니다. 4부터 시작하는 이유는 2와 3은 소수이므로 합성수가 아니기 때문입니다.
+for j in range(2, int(i ** 0.5) + 1):
+
+여기서 j는 i를 나누는 수입니다. i의 제곱근까지만 검사하는 이유는, 합성수는 약수 쌍으로 이루어지며 제곱근보다 큰 약수는 이미 작은 약수에서 검사되었기 때문입니다. 예를 들어, 36의 약수는 6×6을 기준으로 1부터 6까지만 보면 되므로, 7 이상의 숫자는 굳이 확인할 필요가 없습니다.
+if i % j == 0:
+
+i가 j로 나눠떨어지면 합성수임을 뜻합니다. 즉, 약수 j가 존재하면 합성수로 판정합니다.
+output += 1:
+
+합성수를 찾았으므로 합성수 개수를 1 증가시킵니다.
+break:
+
+한 번이라도 나누어떨어지면 합성수임이 확정되므로 더 이상 검사를 하지 않고 내부 for 루프를 빠져나옵니다.
+return output:
+
+최종적으로 계산된 합성수의 개수를 반환합니다.
+
+```
+
 - 1014
+
 ```
 - in : 실제 숫자가 포함되어 있느냐를 보려면 str형태로 바꾸어보면 좋음
 ```
-
 
 - 1013
 
@@ -11,30 +39,31 @@
 def solution(snippet, message):
     # 메시지를 공백 단위로 단어 리스트로 변환
     words = message.split()
-    
+
     # snippet을 딕셔너리로 변환
     snippet_dict = {abbr: full for abbr, full in snippet}
-    
+
     # 각 단어를 순회하면서 대치가 필요한 경우 대치
     for i in range(len(words)):
         if words[i] in snippet_dict:
             words[i] = snippet_dict[words[i]]
 ```
+
 ```
 - 정규표현식 및 join
 
 import re
 
 def solution(snippet, message):
-    m_list = re.split(r'(\s+|[!@#$%^&*().,?])', message) 
-    
+    m_list = re.split(r'(\s+|[!@#$%^&*().,?])', message)
+
     for i in range(len(m_list)):
         # 단어가 대치될 단어에 해당하는지 확인
         for pair in snippet:
             if m_list[i] == pair[0]:
                 # 대치 목록에 있으면 해당 단어를 대치 단어로 변경
                 m_list[i] = pair[1]
-    
+
     # 대치된 단어 리스트를 다시 문자열로 합쳐서 반환
     return ''.join(m_list)
 ```
@@ -46,7 +75,6 @@ def solution(snippet, message):
 ```
 - 순회한 문자가 특정 문자를 포함하고 있는지 : all(c in '05' for c in str(num))
 ```
-
 
 - 1012
 
