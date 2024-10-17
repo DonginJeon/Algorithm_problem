@@ -1,3 +1,22 @@
+- 1017
+
+  ```
+  # 키와 값 리스트
+  keys = ['key1', 'key2', 'key3', 'key4', 'key5', 'key6', 'key7', 'key8', 'key9', 'key10']
+  values = ['value1', 'value2', 'value3', 'value4', 'value5', 'value6', 'value7', 'value8', 'value9', 'value10']
+
+  # 빈 딕셔너리 생성
+  my_dict = {}
+
+  # 키와 값을 대응하여 딕셔너리에 넣기
+  for i in range(len(keys)):
+      my_dict[keys[i]] = values[i]
+
+  # 결과 출력
+  print(my_dict)
+
+  ```
+
 - 1016
 
 ```
