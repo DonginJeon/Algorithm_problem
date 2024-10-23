@@ -1,3 +1,26 @@
+- 1023
+
+  ```
+  이중 리스트의 원소를 받아오는 방법
+  ```
+
+  ![alt text](image-1.png)
+
+  ```
+  - 좌표문제일때
+  for i in range(len(wall)):
+        for j in range(len(wall[i])):
+            if wall[i][j] == "#":
+                a.append(i)
+                b.append(j)
+  ```
+
+  ```
+  - 0으로 찬 n * n매트릭스 만들기
+  ```
+
+  ![alt text](image.png)
+
 - 1021
 
   ```
