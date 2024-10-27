@@ -1,3 +1,26 @@
+- 1026
+  ```
+  - 행렬의 합
+  def solution(arr1, arr2):
+    return [[a + b for a, b in zip(row1, row2)] for row1, row2 in zip(arr1, arr2)]
+  ```
+
+  ```
+  - 최대공약수 최소 공배수
+    gcd_value = math.gcd(n, m)
+    # 최소공배수 계산: (n * m) // gcd_value
+    lcm_value = (n * m) // gcd_value
+  ```
+  ```
+  - counter
+  from collections import Counter
+
+  def solution(X, Y):
+      # 각 숫자의 빈도수를 카운팅
+      count_X = Counter(X)
+      count_Y = Counter(Y)
+  ```
+
 - 1023
 
   ```
