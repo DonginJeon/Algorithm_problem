@@ -1,3 +1,43 @@
+-
+
+- 1027
+  ```
+  - 딕셔너리 인덱스를 통해 여러번 나온 문자에 대해 가장 큰 인덱스 가져와서 계산하기
+   last_seen = {}  # 문자와 마지막 인덱스 저장
+    
+    for idx, char in enumerate(s):
+        if char not in last_seen:
+            answer.append(-1)  # 첫 등장 시 -1 추가
+        else:
+            answer.append(idx - last_seen[char])  # 가장 가까운 거리 추가
+        last_seen[char] = idx  # 마지막 등장 위치 갱신
+  ```
+
+
+  ```
+  ord란 ordinal position의 약자로, 문자의 순서 위치 값을 의미한다.
+  10진수 유니코드(Unicode)로 값을 변환
+ 
+
+  chr이란 chracter의 약자로, 정수 값을 유니코드 문자로 변환
+
+  ```
+
+  ```
+  replace_dict = {s[0]: s[1] for s in snippet}
+  빠르게 딕셔너리 만들기
+  ```
+  ```
+  - get() 메서드
+  r_dict = {s[0]: s[1] for s in snippet}
+  for i in sen:
+      # 대치되는 단어가 있는 경우 대치, 없으면 원래 단어 사용
+      answer.append(r_dict.get(i,i))
+  return ' '.join(answer)
+
+
+  ```
+
 - 1026
   ```
   - 행렬의 합
