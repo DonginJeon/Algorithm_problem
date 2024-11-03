@@ -1,3 +1,10 @@
+- 1103
+  ```
+  sorted
+  answer = sorted(answer,key = lambda x: x[list_dict[sort_by]])
+  배열하고 싶은 리스트 내에서 조건을 걸고 싶을떄
+  ```
+
 -1029
   ```
   - .str[:n]
