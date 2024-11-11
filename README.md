@@ -1,3 +1,9 @@
+- 1111
+```
+- 리스트에서 특정원소 지우기
+  - a.remove(min(a))
+```
+
 - 1104
 
 ```
@@ -86,6 +92,21 @@ year
     return [[a + b for a, b in zip(row1, row2)] for row1, row2 in zip(arr1, arr2)]
 
   ```
+
+
+  ```
+  행렬의 합2
+    def solution(matrix_A, matrix_B):
+    answer = []
+    for i in range(len(matrix_A)):
+        row = []
+        for j in range(len(matrix_A[i])):
+            row.append(matrix_A[i][j]+matrix_B[i][j])
+        answer.append(row)            
+    return answer
+  ```
+
+
 
   ```
 
