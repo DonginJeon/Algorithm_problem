@@ -1,4 +1,11 @@
+- 1112
+- 리스트 삭제
+
+  - del a[순서]
+  - remove(지우려는 원소)
+
 - 1111
+
 ```
 - 리스트에서 특정원소 지우기
   - a.remove(min(a))
@@ -93,40 +100,37 @@ year
 
   ```
 
+```
+행렬의 합2
+  def solution(matrix_A, matrix_B):
+  answer = []
+  for i in range(len(matrix_A)):
+      row = []
+      for j in range(len(matrix_A[i])):
+          row.append(matrix_A[i][j]+matrix_B[i][j])
+      answer.append(row)
+  return answer
+```
 
-  ```
-  행렬의 합2
-    def solution(matrix_A, matrix_B):
-    answer = []
-    for i in range(len(matrix_A)):
-        row = []
-        for j in range(len(matrix_A[i])):
-            row.append(matrix_A[i][j]+matrix_B[i][j])
-        answer.append(row)            
-    return answer
-  ```
+```
 
+- 최대공약수 최소 공배수
+  gcd_value = math.gcd(n, m)
+  # 최소공배수 계산: (n \* m) // gcd_value
+  lcm_value = (n \* m) // gcd_value
 
+```
 
-  ```
+```
 
-  - 최대공약수 최소 공배수
-    gcd_value = math.gcd(n, m)
-    # 최소공배수 계산: (n \* m) // gcd_value
-    lcm_value = (n \* m) // gcd_value
+- counter
+  from collections import Counter
 
-  ```
+def solution(X, Y): # 각 숫자의 빈도수를 카운팅
+count_X = Counter(X)
+count_Y = Counter(Y)
 
-  ```
-
-  - counter
-    from collections import Counter
-
-  def solution(X, Y): # 각 숫자의 빈도수를 카운팅
-  count_X = Counter(X)
-  count_Y = Counter(Y)
-
-  ```
+```
 
 - 1023
 
