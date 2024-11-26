@@ -1,3 +1,12 @@
+- 1126
+```
+- 단어.lower().split()
+- 가장 많은 원소 카운트
+  counts = collections.Counter(words)
+  return counts.most_common(1)[0][0]    
+```
+
+
 - 1124
 
 ```
