@@ -1,3 +1,16 @@
+- 1201
+```
+최대값을 정할 때는 sys.maxsize을 이용하면 좋음
+```
+
+```
+for i in prices:
+    min_price = min(min_price, i)
+    profit = max(profit, i - min_price)
+
+    차이가 가장 큰 값 구하기
+```
+
 - 1126
 ```
 - 단어.lower().split()
