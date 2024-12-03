@@ -1,4 +1,11 @@
+- 1203
+
+```
+연결리스트
+```
+
 - 1201
+
 ```
 최대값을 정할 때는 sys.maxsize을 이용하면 좋음
 ```
@@ -12,13 +19,13 @@ for i in prices:
 ```
 
 - 1126
+
 ```
 - 단어.lower().split()
 - 가장 많은 원소 카운트
   counts = collections.Counter(words)
-  return counts.most_common(1)[0][0]    
+  return counts.most_common(1)[0][0]
 ```
-
 
 - 1124
 
@@ -26,14 +33,17 @@ for i in prices:
 - isalnum()
   - 숫자인지 영문자인지 판단.
 ```
-  - 람다함수의 이용 
+
+- 람다함수의 이용
   ![alt text](image-5.png)
-  ```
-  s = ['2 A','1 B','4 C','1 A']
-  s.sort(key = lambda x: (x.split()[1], x.split()[0]))
-  ```
+
+```
+s = ['2 A','1 B','4 C','1 A']
+s.sort(key = lambda x: (x.split()[1], x.split()[0]))
+```
 
 - 1112
+
   - 리스트 삭제
 
     - del a[순서]
